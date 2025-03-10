@@ -1,5 +1,6 @@
 import session from 'express-session';
 import passport from 'passport';
+import './passportConfig'
 
 export const sessionMiddleware = session({
     secret: process.env.SESSION_SECRET || 'defaultsecret',
