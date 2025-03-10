@@ -21,7 +21,7 @@ export default function Home() {
 
     return (
         <div style={{ textAlign: 'center', padding: '2rem' }}>
-            <h1>Welcome to Deadlytix</h1>
+            <h1>Welcome to Lockalytics</h1>
             {user ? (
                 <div>
                     <p>Logged in as: {user.displayName}</p>

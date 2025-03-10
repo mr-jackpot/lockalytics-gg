@@ -1,6 +1,7 @@
 import { createRouter } from 'next-connect';
 import passport from 'passport';
 import {passportMiddlewares, sessionMiddleware} from "@/lib/middleware";
+import '../../../../lib/passportConfig'
 
 const router = createRouter();
 
@@ -15,7 +16,7 @@ router.get((req, res, next) => {
         req.logIn(user, (err) => {
             if (err) return next(err);
             // Redirect to dashboard after successful login
-            return res.redirect('/');
+            return res.redirect('/profile');
         });
     })(req, res, next);
 });
