@@ -6,6 +6,7 @@ import MostRecentMatchCard from "../../components/MostRecentMatchCard";
 interface User {
   displayName: string;
   photos?: { value: string }[];
+  _json: { steamid: string };
 }
 
 export default function Page() {
@@ -77,7 +78,7 @@ export default function Page() {
 
             {/* Most Recent Match Card */}
             <div className="mt-8">
-              <MostRecentMatchCard />
+              <MostRecentMatchCard steamId64={user.id} />
             </div>
           </>
         ) : (
