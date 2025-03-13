@@ -20,7 +20,7 @@ interface MatchData {
  * - A complete stomp is ~2.0.
  */
 export function calculateRating(matchData: MatchData): number {
-  const stats = matchData.stats[0];
+  const stats = matchData.stats;
   const teamHealing = stats.player_healing - stats.self_healing;
 
   // Normalize each metric relative to its average.
